@@ -8,35 +8,44 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.4.1.js"></script>
   <script src="js/scripts.js"></script>
-  <title></title>
+  <title>Celebrity</title>
 </head>
 
 <body>
   <div class="container">
     <h1>Welcome to our dating site!</h1>
     <p>Here you can find your best match</p>
-    <form>
+    <form class="needs-validation" novalidate>
       <div class="form-group row">
         <label for="name" class="col-sm-2 col-form-label">Your Name</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="name" placeholder="Jane Doe">
+          <input type="text" class="form-control" class="name">
+          <div class="invalid-feedback">
+            Please provide a name.
+          </div>
         </div>
       </div>
       <div class="form-group row">
         <label for="age" class="col-sm-2 col-form-label">Age</label>
         <div class="col-sm-10">
-          <input type="number" class="form-control" id="age" placeholder="21">
+          <input type="number" class="form-control age" placeholder="21">
+          <div class="invalid-feedback">
+            Please provide your age.
+          </div>
         </div>
       </div>
       <div class="form-group row">
         <label for="color" class="col-sm-2 col-form-label">Your favorite color</label>
         <div class="col-sm-10">
-          <select class="custom-select mr-sm-2" id="color">
+          <select class="custom-select mr-sm-2 color">
             <option selected>Choose...</option>
             <option value="blue">Blue</option>
             <option value="red">Red</option>
             <option value="green">Green</option>
           </select>
+          <div class="invalid-feedback">
+            Please provide your favorite color.
+          </div>
         </div>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
@@ -52,5 +61,24 @@
     </div>
   </div>
 </body>
-
+<!-- <script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script> -->
 </html>

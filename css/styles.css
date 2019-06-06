@@ -1,3 +1,7 @@
 .justin, .brad, .katy {
   display: none;
 }
+
+img {
+  width: 200px;
+}
